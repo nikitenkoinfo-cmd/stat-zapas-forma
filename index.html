@@ -77,6 +77,10 @@
   .super-holders figure{margin:0;}
   .super-holders .holder{margin-bottom:12px;}
   .super-holders figcaption{font-size:14px;color:rgba(26,26,26,.7);}
+  .super-list{list-style:none;display:grid;gap:12px;max-width:640px;margin:0 auto 40px;text-align:left;}
+  .super-list li{display:flex;gap:12px;align-items:flex-start;font-size:16px;color:rgba(26,26,26,.85);}
+  .super-list .emoji{flex:0 0 auto;font-size:20px;line-height:1.4;}
+  .super-list b{font-weight:600;}
 
   /* ---------- ОБРАЩЕНИЕ ТАТЬЯНЫ ---------- */
   .tatyana{background:var(--cream);}
@@ -88,6 +92,11 @@
     letter-spacing:.5px;color:var(--orange);margin-bottom:16px;}
   .tw h2{font-size:34px;margin-bottom:20px;line-height:1.15;}
   .tw p{color:rgba(26,26,26,.85);font-size:17px;margin-bottom:16px;}
+  .tw .tw-list{list-style:none;display:grid;gap:10px;margin:0 0 16px;}
+  .tw .tw-list li{position:relative;padding-left:24px;color:rgba(26,26,26,.85);font-size:17px;}
+  .tw .tw-list li::before{content:"";position:absolute;left:4px;top:9px;width:8px;height:8px;
+    border-radius:50%;background:var(--orange);}
+  .tw .tw-list b{font-weight:600;}
   .tw .btn-green{margin-top:10px;}
 
   /* ---------- КНОПКА ---------- */
@@ -200,21 +209,21 @@
   <section class="hero">
     <div class="wrap">
       <p class="eyebrow fade d1">Эффективная кулинария · Заготовки на неделю</p>
-      <h1 class="fade d2">Вы в одном шаге<br>от <span class="accent">эффективной кулинарии</span></h1>
-      <p class="lead fade d3">На эфире вы уже увидели, как работает система заготовок. Оставьте заявку — и сделайте первый шаг к кухне, где <strong>ужин готов за 10–15 минут</strong>, а <strong>вопрос «что приготовить сегодня?» больше не висит</strong> над каждым вечером.</p>
+      <h1 class="fade d2">В шаге от порядка<br>и <span class="accent">лёгкости на кухне</span></h1>
+      <p class="lead fade d3">На эфире вы увидели, как работают заготовки. Оставьте заявку и забудьте о рутине. Готовьте <strong>ужин за 10–15 минут</strong> и больше не ломайте голову над вопросом <strong>«Что приготовить сегодня?»</strong>.</p>
 
       <div class="props fade d4">
         <div class="prop">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15.5 14"></polyline></svg>
-          <span>Ужин за 10–15 минут прямо из морозилки</span>
+          <span>Ужин всего за 10–15 минут!</span>
         </div>
         <div class="prop">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="8" y1="2.5" x2="8" y2="6.5"></line><line x1="16" y1="2.5" x2="16" y2="6.5"></line></svg>
-          <span>Один день готовки — меню на всю неделю</span>
+          <span>Меню на неделю за 1 день</span>
         </div>
         <div class="prop">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-1a8 8 0 0 1 16 0v1"></path><rect x="2.5" y="13" width="4" height="6" rx="1.5"></rect><rect x="17.5" y="13" width="4" height="6" rx="1.5"></rect><path d="M20 19v.5a3 3 0 0 1-3 3H13"></path></svg>
-          <span>Личная помощь менеджера со стартом</span>
+          <span>Мы поможем разобраться и начать</span>
         </div>
       </div>
     </div>
@@ -224,8 +233,8 @@
   <section class="form-section" id="zayavka">
     <div class="wrap">
       <div class="form-card fade d5">
-        <h2>Оставьте заявку на курс</h2>
-        <p class="sub">Менеджер свяжется с вами, ответит на вопросы и поможет выбрать удобный вариант участия и оплаты.</p>
+        <h2>Давайте вместе подберём удобный формат</h2>
+        <p class="sub">Менеджер свяжется с вами, чтобы ответить на любые ваши вопросы о курсе, подобрать тариф и обсудить комфортные условия оплаты.</p>
 
         <!-- =======================================================
              МЕСТО ПОД ВИДЖЕТ GETCOURSE
@@ -247,20 +256,20 @@
   <!-- ============ БОНУСЫ ЗА ЗАЯВКУ ============ -->
   <section class="bonuses">
     <div class="wrap">
-      <h2>А ещё за заявку — подарки</h2>
-      <p class="intro">Главное вы получаете на курсе — рабочую систему заготовок, которая закрывает вопрос ужина на неделю вперёд. А за заявку забираете вдобавок ещё и это:</p>
+      <h2>Всё необходимое для лёгкой кухни — уже внутри</h2>
+      <p class="intro">Вместе с доступом к системе заготовок «Эффективная кулинария» вы получаете ещё и готовый набор материалов и инструментов, чтобы начать без лишних забот:</p>
       <ul class="checklist">
         <li>
           <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <span><b>Гайд «5 заготовок, которые спасут ваш вечер»</b> — пять базовых заготовок, из которых собирается ужин на всю неделю за один час.</span>
+          <span><b>Гайд «5 заготовок, которые спасут ваш вечер»</b> — пять базовых заготовок, из которых вы всю неделю собираете ужины за 10 минут!</span>
         </li>
         <li>
           <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <span><b>Вакууматор с боксом для заготовок</b> — при записи на курс: вакууматор, пакеты и контейнеры. Открыли и сразу начали заготавливать.</span>
+          <span><b>Вакууматор + подарочный бокс</b> с пакетами для вакуумации и контейнерами — всё, что нужно, чтобы начать делать правильные заготовки!</span>
         </li>
         <li>
           <svg class="tick" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <span><b>Курс «Пельмени, лапша и компания»</b> — при записи на курс.</span>
+          <span><b>Дополнительный курс «Пельмени, лапша и компания»</b> — секреты домашних полуфабрикатов, которые всегда выручат.</span>
         </li>
       </ul>
     </div>
@@ -269,9 +278,15 @@
   <!-- ============ ЛЕТНИЙ СУПЕР-ПОДАРОК ============ -->
   <section class="super">
     <div class="wrap super-inner">
-      <span class="ribbon">А ещё летний супер-подарок</span>
-      <h3>Курс «Домашние заготовки. Соленья, маринады, консервация»</h3>
-      <p class="lead">Сейчас он на пике сезона и скоро уйдёт в платную продажу за <span class="price">8 000&nbsp;₽</span>. Участники получают его бесплатно — при записи на основной курс. Около 30 рецептов: соленья, маринады, соусы, суповые заправки, грибы, варенья, компоты и даже домашние мясные консервы.</p>
+      <span class="ribbon">Сезонный спецкурс в подарок</span>
+      <h3>Курс «Домашние заготовки: соленья, маринады, консервация»</h3>
+      <p class="lead">Отдельно этот курс стоит <span class="price">8 000&nbsp;₽</span>, но участники летнего потока «Эффективной кулинарии» получают его бесплатно! Это идеальное и самое актуальное дополнение к основной программе прямо сейчас.</p>
+
+      <ul class="super-list">
+        <li><span class="emoji">🥒</span><span><b>Золотая классика</b> — хрустящие соленья и пикантные маринады.</span></li>
+        <li><span class="emoji">🥕</span><span><b>Выручалочки</b> — домашние соусы и готовые суповые заправки.</span></li>
+        <li><span class="emoji">🍓</span><span><b>Запасы на зиму</b> — грибы, ароматные варенья, компоты и мясные консервы.</span></li>
+      </ul>
 
       <!-- три холдера под фото, 3:4 -->
       <div class="super-holders">
@@ -290,11 +305,16 @@
         <div class="photo-holder">Фото Татьяны Косточкиной</div>
         <div class="content">
           <p class="t-label">Татьяна Косточкина · соавтор школы Home Chef</p>
-          <h2>Сейчас — самое время принять решение</h2>
-          <p>Я сама живу по системе заготовок уже больше года и точно знаю: она работает не только на кухне шефа, а в обычной семье. Один день готовки в выходной — и всю неделю ужин собирается из морозилки за 10–15 минут.</p>
-          <p>На курсе это <strong>21 блюдо в неделю и 84 на месяц</strong>, готовый список покупок до граммовок и поддержка куратора. Вам не нужно ничего придумывать — просто повторять за нами.</p>
-          <p>Я обещаю: у вас получится так же, как у 1 500 семей до вас. Оставьте заявку — а дальше мы поможем.</p>
-          <a href="#zayavka" class="btn-green">Оставить заявку</a>
+          <h2>Давайте раз и навсегда закроем вопрос с готовкой</h2>
+          <p>Я сама живу по этой системе уже больше года. Она создана не для мишленовских ресторанов, а для обычных семей, где ужин из морозилки собирается за 10–15 минут.</p>
+          <p><strong>Что вы получите на курсе:</strong></p>
+          <ul class="tw-list">
+            <li><b>Готовое меню</b> — 21 блюдо на неделю, 84 на месяц.</li>
+            <li><b>Точный расчёт</b> — списки покупок до грамма, никакой лишней траты денег.</li>
+            <li><b>Полный контроль</b> — заботливая поддержка куратора на каждом шагу.</li>
+          </ul>
+          <p>Вам не придётся ничего придумывать — просто повторяйте за нами. У вас точно получится, я в вас верю!</p>
+          <a href="#zayavka" class="btn-green">Начать лёгкую готовку</a>
         </div>
       </div>
     </div>
